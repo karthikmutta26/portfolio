@@ -341,11 +341,7 @@ footer p:nth-child(2){
 .right form .button-area button{
   color: #fff;
   display: block;
-  width: 160px!important;
   height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
@@ -423,18 +419,45 @@ footer p:nth-child(2){
     width: 90%;
 }
 .skills-content .right .css::before{
-    width: 60%;
+    width: 80%;
 }
 .skills-content .right .js::before{
+    width: 70%;
+}
+.skills-content .right .mysql::before{
     width: 80%;
 }
 .skills-content .right .php::before{
-    width: 50%;
-}
-.skills-content .right .mysql::before{
     width: 70%;
 }
+.skills-content .right .j::before{
+    width: 80%;
+}
+.skills-content .right .cP::before{
+    width: 80%;
+}
+html{
+    scroll-behavior: smooth;
+}
        </style>
+       <script>
+        $(document).ready(function(){
+    $(window).scroll(function(){
+        // sticky navbar on scroll script
+        if(this.scrollY > 20){
+            $('.hero').addClass("sticky");
+        }else{
+            $('.hero').removeClass("sticky");
+        }
+        
+        // scroll-up button show/hide script
+        if(this.scrollY > 500){
+            $('.scroll-up-btn').addClass("show");
+        }else{
+            $('.scroll-up-btn').removeClass("show");
+        }
+    });
+       </script>
     </head>
     <body bgcolor="black">
        <div class="hero">
@@ -442,31 +465,27 @@ footer p:nth-child(2){
            <h2 class="logo">PORTFOLIO</h2> 
            <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Technical skills</a></li>
-            <li><a href="#">Contact US</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Technical skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#social">Social</a></li>
            </ul>
-           <a href="# " class="btn">Subscribe</a>
         </nav>
-        
-        <div class="content" >
+    </div>
+        <section class="content" >
             <h2>Hello,I'm </h2>
             <h2><span>MUTTA KARTHIK PATTABHI RAMA RAO</span></h2>
             <h2>I'm a student</h2>
         <div class="some">
-            <form>
-                <input type="email" name="email" id="mail" placeholder="Enter your email">
-                <input type="submit" name="submit" value="Let's Start">
-            </form>
+           
         </div>
         <div class="box1">
-            <img src="C:\Users\DELL\Downloads\2.jpeg" height="500px" width="500px" >
+            <img src="C:\Users\DELL\Downloads\2.jpeg" height="500px" width="500px"  style="background-position:center;height:500px;width: 500px;border-radius: 300px;">
           </div>
-       </div>
-       </div>
+       </section>
        <section class="about">
         <div class="main">
-            <img src="C:\Users\DELL\Downloads\1.jpeg" style="background-position:center;height:500px;width: 500px;">
+            <img src="C:\Users\DELL\Downloads\1.jpeg" style="background-position:center;height:500px;width: 500px;border-radius: 300px;">
             <div class="about-text">
                 <h2>About Me</h2>
                 <h5><span>Student</span></h5>
@@ -479,9 +498,78 @@ footer p:nth-child(2){
             </div>
         </div>
        </section>
-       <section class="contact" id="contact">
+        <br>
+        <br>
+        <br>
+    <center>
+        <section class="skills" id="skills">
+            <div class="max-width">
+                <h2 class="title">My Skills</h2>
+                <br>
+                <div class="skills-content">
+                    
+                    <div class="column right">
+                        <div class="bars">
+                            <div class="info">
+                                <span>HTML</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="line html"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>CSS</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="line css"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>JAVA SCRIPT</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="line js"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>JAVA</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="line j"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>C++</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="line cP"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>PHP</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="line php"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>MySQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="line mysql"></div>
+                        </div>
+                         </center>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <section class="contact" id="contact">
         <div class="max-width">
            <center> <h2 class="title">Contact me</h2>
+            <br>
             <div class="contact-content">
             
                 <div class="column right">
@@ -512,73 +600,24 @@ footer p:nth-child(2){
         </div>
         <br>
         <br>
-    <center>
-        <section class="skills" id="skills">
-            <div class="max-width">
-                <h2 class="title">My skills</h2>
-                <div class="skills-content">
-                    
-                    <div class="column right">
-                        <div class="bars">
-                            <div class="info">
-                                <span>HTML</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="line html"></div>
-                        </div>
-                        <div class="bars">
-                            <div class="info">
-                                <span>CSS</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="line css"></div>
-                        </div>
-                        <div class="bars">
-                            <div class="info">
-                                <span>JAVA</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="line js"></div>
-                        </div>
-                        <div class="bars">
-                            <div class="info">
-                                <span>C++</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="line js"></div>
-                        </div>
-                        <div class="bars">
-                            <div class="info">
-                                <span>PHP</span>
-                                <span>30%</span>
-                            </div>
-                            <div class="line php"></div>
-                        </div>
-                        <div class="bars">
-                            <div class="info">
-                                <span>MySQL</span>
-                                <span>50%</span>
-                            </div>
-                            <div class="line mysql"></div>
-                        </div>
-                         </center>
-                    </div>
-                </div>
-            </div>
-        </section>
         <br>
-        <br>
-        <center>
-        <p style="color: lightsalmon;">Visit me over various social platforms</p></center>
-        <center><div class="social">
+        <section class="social" id="social">
+            <center>
+                <h2>Visit me over various social platforms</h2>
+                <br>
+        <div class="social">
           <a href="https://www.linkedin.com/in/karthik-mutta-830413253/"><i class="fa-brands fa-linkedin"></i></a>
           <a href="https://www.facebook.com/karithik.mutta"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
         </div>
-        </center>
+       
+    </center>
+        </section>
+       
     </section>
        <footer>
         <hr style="width: 100%;">
+        <br>
         <br>
         <br>
         <p>
